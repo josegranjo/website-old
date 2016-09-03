@@ -165,7 +165,7 @@
       function launch () {
         document.querySelector('.rocket').classList.add('rocket-in-space')
         document.querySelector('.rocket-label').classList.add('transparent')
-        setTimeout(() => {
+        setTimeout(function () {
           document.querySelector('.rocket-label').textContent = 'The sky is not the limit.'
           document.querySelector('.rocket-label').classList.remove('transparent')
           document.querySelector('.rocket-label').classList.remove('link')
