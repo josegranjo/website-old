@@ -139,9 +139,9 @@ a:hover {
   color: #2E7AE8;
   font-size: 14px;
   position: absolute;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -ms-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -ms-transition: opacity 2s ease-in-out;
   opacity: 1;
 
 
@@ -153,10 +153,6 @@ a:hover {
 
 .link {
   cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 .transparent {
