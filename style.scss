@@ -30,9 +30,13 @@ body {
   }
 }
 
+h2, h4 {
+  font-weight: 600;
+}
+
 .title {
   display: inline-block;
-  font-weight: bold;
+  font-weight: 100;
   max-width: 300px;
 
   @include phone {
