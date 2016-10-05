@@ -90,7 +90,7 @@ a:hover {
 }
 
 .content {
-  margin-bottom: 120px;
+  margin-bottom: 160px;
 }
 
 .bio {
@@ -166,6 +166,9 @@ footer {
   left: 50px;
   position: fixed;
   width: 100%;
+  -webkit-box-shadow: 0px -14px 34px 40px #FCFCFC;
+  -moz-box-shadow: 0px -14px 34px 40px #FCFCFC;
+  box-shadow: 0px -14px 34px 40px #FCFCFC;
 
   @include phone {
     left: 8px;
