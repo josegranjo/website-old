@@ -24,6 +24,11 @@ body {
   overflow-x: hidden;
   padding: 0 42px;
 
+  > div {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
   @include phone {
     font-size: 16px;
     line-height: 24px;
