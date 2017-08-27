@@ -4,10 +4,10 @@ const Publications = () => (
   <div>
     <h4>Publications</h4>
     <p>
-      <strong>
+      <i>
         Representation and analysis of enterprise models with semantic
         techniques
-      </strong>
+      </i>
       <br/>
       A. Caetano, J. Pombinho, J. Granjo, M. Bakhshandeh, G. Antunes,
       M, Mira da Silva, J. Borbinha
@@ -17,7 +17,7 @@ const Publications = () => (
       2016
     </p>
     <p>
-      <strong>Validating Value Network Business Models by Ontologies</strong>
+      <i>Validating Value Network Business Models by Ontologies</i>
       <br/>
       J. Granjo, J. Pombinho, M. Mira da Silva, A. Caetano and M. Bakhshandeh
       <br/>
@@ -26,7 +26,6 @@ const Publications = () => (
       <br/>
       2014
     </p>
-    <iframe src="https://open.spotify.com/embed/track/04krZOd9RFz1XyqJvfkNBz" width="500" height="80" frameborder="0" allowtransparency="true"></iframe>
   </div>
 )
 

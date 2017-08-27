@@ -3,19 +3,11 @@ import React from 'react'
 const Bio = () => (
   <div>
     <div className='bio'>
-      Engineer at
+      Currently an engineer at
       <a className='green' href='http://spotify.com/'> Spotify </a>
-      in Stockholm.
+      in Stockholm
       <br/>
     </div>
-
-    <h4>Currently</h4>
-    <ul>
-      <li>
-        <a className='green' href='https://www.spotify.com'>Spotify</a> -
-        Commercial R&D
-      </li>
-    </ul>
 
     <h4>Past</h4>
     <p>
@@ -26,8 +18,7 @@ const Bio = () => (
       I led prototyping and web front-end teams for
       <a href='https://www.ericsson.com'> Ericsson</a>,
       <a href='http://www.ikea.com/gb/en/'> Ikea</a>,
-      <br/>
-      and together with <a href='https://www.microsoft.com/en-us/microsoftservices/professional-services.aspx'> Microsoft </a> for
+      <a href='https://www.microsoft.com/en-us/microsoftservices/professional-services.aspx'> Microsoft</a>,
       <a href='http://www.sandvik.coromant.com/en-gb/pages/default.aspx'> Sandvik Coromant </a>
       and
       <a href='https://www.lexplore.com/'> Lexplore</a>.
