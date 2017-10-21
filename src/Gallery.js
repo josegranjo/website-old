@@ -17,7 +17,7 @@ const Gallery = () => {
 
   return (
     <div style={isPhone() ? styles.phoneGallery : {}}>
-      {images.map(img => <img src={img} width={width} />)}
+      {images.map((img, k) => <img key={`img-${k}`}src={img} width={width} />)}
     </div>
   )
 }

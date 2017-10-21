@@ -3,7 +3,6 @@ import React from 'react'
 const Sides = ({ children }) => {
 
   const isPhone = () => window.innerWidth <= 450
-
   const Label = ({ label }) => <div style={styles.title}>{label}</div>
 
   const side1 = (
@@ -19,14 +18,12 @@ const Sides = ({ children }) => {
       { children[1] }
     </div>
   )
-
-  const content = isPhone()
-    ? <div>{side2}{side1}</div>
-    : <div>{side1}{side2}</div>
-
+  
   return (
     <div style={isPhone() ? {} : styles.sideContainer}>
-      {content}
+      {isPhone() ? side2 : ''}
+      {side1}
+      {isPhone() ? '' : side2}
     </div>
   )
 }

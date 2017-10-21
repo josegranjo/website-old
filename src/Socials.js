@@ -3,7 +3,7 @@ import React from 'react'
 const Socials = () => (
   <div className='links'>
     {
-      socials.map(social => <Link {...social} />)
+      socials.map((social, k) => <Link key={`social-${k}`}{...social} />)
     }
   </div>
 )

@@ -16,6 +16,7 @@ class Menu extends React.Component {
     const content = clicked === null ? <div></div> : children[clicked]
     const els = links.map((link, k) =>
       <Link
+        key={`link-${k}`}
         title={link.title}
         status={clicked === k}
         onClick={() => this.onClick(k)}
