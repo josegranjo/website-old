@@ -2,9 +2,10 @@
 @import url("https://rsms.me/interface/interface.css");
 body {
   background-color: #FCFCFC;
-  font-family: Interface, 'Avenir Next', 'Avenir', 'Lucida Grande', Helvetiva, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  line-height: 22px;
+  font-weight: 400;
+  line-height: 1.8;
   overflow-x: hidden;
   padding: 0 42px; }
   body > div {
@@ -17,7 +18,7 @@ body {
       padding: 0 8px; } }
 
 h2, h4 {
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 28px; }
 
 .title {
@@ -64,25 +65,17 @@ a, a:hover, a:active, a:visited {
 a:hover {
   text-decoration: underline; }
 
-.links {
-  margin-bottom: 20px; }
-  .links a:hover {
-    text-decoration: none; }
-  .links i {
-    color: #A0A0A0;
-    font-size: 20px;
-    font-style: normal;
-    margin-right: 4px; }
-    .links i:hover {
-      color: #2E7AE8; }
-  @media screen and (min-width: 441px) {
-    .links {
-      position: absolute;
-      top: 24px;
-      left: 580px; } }
-  @media screen and (min-width: 0) and (max-width: 440px) {
-    .links {
-      display: block; } }
+.links a:hover {
+  text-decoration: none; }
+
+.links i {
+  color: black;
+  font-size: 32px;
+  font-style: normal;
+  margin-right: 20px;
+  line-height: 1; }
+  .links i:hover {
+    color: #2E7AE8; }
 
 .content {
   margin-bottom: 160px; }
@@ -94,13 +87,14 @@ a:hover {
 
 .rocket {
   cursor: pointer;
-  font-size: 32px;
+  font-size: 68px;
   position: fixed;
-  bottom: 42px;
+  bottom: 12px;
   left: 50px;
   z-index: 10; }
   @media screen and (min-width: 0) and (max-width: 440px) {
     .rocket {
+      bottom: 36px;
       font-size: 38px;
       left: 8px; } }
 
@@ -120,8 +114,11 @@ a:hover {
 .rocket-label {
   bottom: 14px;
   color: #2E7AE8;
-  font-size: 13px;
+  font-size: 11px;
+  font-weight: 600;
   position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   -webkit-transition: opacity 2s ease-in-out;
   -moz-transition: opacity 2s ease-in-out;
   -ms-transition: opacity 2s ease-in-out;
@@ -143,10 +140,7 @@ footer {
   height: 72px;
   left: 50px;
   position: fixed;
-  width: 100%;
-  -webkit-box-shadow: 0px -14px 34px 40px #FCFCFC;
-  -moz-box-shadow: 0px -14px 34px 40px #FCFCFC;
-  box-shadow: 0px -14px 34px 40px #FCFCFC; }
+  width: 100%; }
   @media screen and (min-width: 0) and (max-width: 440px) {
     footer {
       left: 8px; } }
