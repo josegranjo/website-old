@@ -58,15 +58,13 @@ const Who = () =>
     <br/>
     - Working with positive people
     <br/>
-    - Being active
+    - Never stop exploring
     <br/>
     - Music made with machines, post-punk, athmospheric and ethereal sounds
     <br/>
     - Clean aesthetics, minimalism
     <br/>
-    - Learn about the world
-    <br/>
-    - Never stop exploring
+    - Read, learn about the world
     <br/>
     - Utopian future
   </Content>

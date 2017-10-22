@@ -13,7 +13,7 @@ const images = [
 const Gallery = () => {
 
   const isPhone = () => window.innerWidth <= 450
-  const width = isPhone() ? '100%' : '76%'
+  const width = isPhone() ? '100%' : '80%'
 
   return (
     <div style={isPhone() ? styles.phoneGallery : {}}>
@@ -24,7 +24,7 @@ const Gallery = () => {
 
 const styles = {
   phoneGallery: {
-    margin: '12px auto 20px auto'
+    marginBottom: 20
   }
 }
 

@@ -6,7 +6,7 @@ const Sides = ({ children }) => {
   const Label = ({ label }) => <div style={styles.title}>{label}</div>
 
   const side1 = (
-    <div style={isPhone() ? {} : styles.side}>
+    <div style={isPhone() ? styles.padded : styles.side}>
       { isPhone() ? '' : <Label label={'This Side'} /> }
       { children[0] }
     </div>
@@ -18,7 +18,7 @@ const Sides = ({ children }) => {
       { children[1] }
     </div>
   )
-  
+
   return (
     <div style={isPhone() ? {} : styles.sideContainer}>
       {isPhone() ? side2 : ''}
@@ -46,6 +46,9 @@ const styles = {
   },
   rightAlign: {
     textAlign: 'right'
+  },
+  padded: {
+    padding: '0 8px'
   }
 }
 

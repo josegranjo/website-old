@@ -10,7 +10,7 @@ class Footer extends Component {
         </div>
         <footer>
           <div className='rocket-label link' onClick={launch}>
-            Touch the rocket to launch
+            Tap the rocket to launch
           </div>
         </footer>
       </div>

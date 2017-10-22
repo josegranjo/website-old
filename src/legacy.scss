@@ -6,7 +6,7 @@ $blue: #2E7AE8;
 $grey: #A0A0A0;
 $green: rgba(30, 215, 96, 1);
 
-$max-width: 1400px;
+$max-width: 1580px;
 
 @mixin phone {
   @media screen and (min-width: 0) and (max-width: #{$phone-width}) {
@@ -27,7 +27,13 @@ body {
   font-weight: 400;
   line-height: 1.8;
   overflow-x: hidden;
-  padding: 0 42px;
+  padding: 0 22px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 
   > div {
     margin: 0 auto;
@@ -37,7 +43,7 @@ body {
   @include phone {
     font-size: 16px;
     line-height: 24px;
-    padding: 0 8px;
+    padding: 0;
   }
 }
 
