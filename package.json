@@ -27,6 +27,7 @@
     "fs-extra": "3.0.1",
     "gh-pages": "^1.0.0",
     "html-webpack-plugin": "2.29.0",
+    "hyperapp": "^1.0.2",
     "jest": "20.0.4",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.0.2",
@@ -92,18 +93,31 @@
   },
   "babel": {
     "plugins": [
-      ["transform-react-jsx", { "pragma": "h" }]],
+      [
+        "transform-react-jsx",
+        {
+          "pragma": "h"
+        }
+      ]
+    ],
     "presets": [
       "react-app"
     ]
   },
   "eslintConfig": {
-    "extends": ["react-app"],
+    "extends": [
+      "react-app"
+    ],
     "rules": {
       "react/react-in-jsx-scope": "off",
-      "no-unused-vars": ["warn", {"args": "none",
-                                  "ignoreRestSiblings": true,
-                                  "varsIgnorePattern": "^h$"}]
+      "no-unused-vars": [
+        "warn",
+        {
+          "args": "none",
+          "ignoreRestSiblings": true,
+          "varsIgnorePattern": "^h$"
+        }
+      ]
     }
   }
 }
