@@ -91,11 +91,19 @@
     ]
   },
   "babel": {
+    "plugins": [
+      ["transform-react-jsx", { "pragma": "h" }]],
     "presets": [
       "react-app"
     ]
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": ["react-app"],
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "no-unused-vars": ["warn", {"args": "none",
+                                  "ignoreRestSiblings": true,
+                                  "varsIgnorePattern": "^h$"}]
+    }
   }
 }
