@@ -1,0 +1,123 @@
+$phone-width: 440px;
+$background-color: #FCFCFC;
+$blue: #2E7AE8;
+$grey: #A0A0A0;
+$green: rgba(30, 215, 96, 1);
+
+@mixin phone {
+  @media screen and (min-width: 0) and (max-width: #{$phone-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$phone-width + 1}) {
+    @content;
+  }
+}
+
+body {
+  color: rgba(0, 0, 0, 0.870588);
+  margin: 0 auto;
+  padding: 42px 0;
+  max-width: 1400px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-weight: normal;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+
+  @include phone {
+    padding-top: 0;
+  }
+}
+
+h4 {
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
+p {
+  // margin-top: 8px;
+}
+
+.socials i {
+  color: black;
+  font-size: 26px;
+  font-style: normal;
+  margin: 40px 16px 44px 0;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.app {
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+  -webkit-transition: opacity 2s ease-in-out;
+}
+
+.app.invisible {
+  opacity: 0;
+}
+
+.header {
+  font-family: 'Rubik';
+  font-size: 18px;
+
+  @include phone {
+    margin-top: 12px;
+  }
+}
+
+.columns {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 60px auto 120px auto;
+  padding: 0 12px;
+
+  > div, > img {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  @include phone {
+    display: block;
+  }
+}
+
+.about {
+  text-align: left;
+}
+
+a, a:hover, a:active, a:visited {
+  color: $blue;
+  display: inline;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.blue-text {
+  color: $blue;
+}
+
+.green-text {
+  color: $green;
+}
+
+footer {
+  div {
+    cursor: pointer;
+    color: $blue;
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
+}

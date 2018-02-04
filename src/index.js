@@ -1,29 +1,67 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import registerServiceWorker from './registerServiceWorker';
-//
-// ReactDOM.render(<App />, document.getElementById('root'));
-// registerServiceWorker();
+import { h, app } from 'hyperapp'
+import './index.css';
 
-import { h, app } from "hyperapp"
+import Header from './Header'
+import About from './About'
+
+import me from './images/me.jpg'
+import clip from './clip.wav'
 
 const state = {
-  count: 0
+  visible: true
 }
 
 const actions = {
-  down: () => state => ({ count: state.count - 1 }),
-  up: () => state => ({ count: state.count + 1 })
+  floatAway: () => state => ({ visible: state.visible = false })
+}
+
+const Columns = ({}, children) => (
+  <div className='columns'>
+    {children}
+  </div>
+)
+
+const Footer = ({ onClick }) => (
+  <footer onclick={onClick} >
+    <div>
+      ふわっと
+    </div>
+  </footer>
+)
+
+const Img = () => (
+  <div styles={{display: 'block'}}>
+    <img src={me} alt='me' width={window.innerWidth <= 440 ? window.innerWidth : 440} />
+  </div>
+)
+
+const Application = ({ visible, floatAway }) => {
+  if (!visible) {
+    setTimeout(window.close, 2000)
+    const sound = new Audio(clip)
+    sound.play()
+  }
+
+  return (
+    <div className={visible ? 'app' : 'app invisible'}>
+      { window.innerWidth <= 440 ? <Img /> : '' }
+      <Header />
+      <Columns>
+        <About />
+        { window.innerWidth > 440 ? <Img /> : '' }
+      </Columns>
+      <Footer onClick={floatAway} />
+    </div>
+  )
 }
 
 const view = (state, actions) => (
-  <main>
-    <h1>{state.count}</h1>
-    <button onclick={actions.down}>-</button>
-    <button onclick={actions.up}>+</button>
-  </main>
+  <Application
+    {...state}
+    {...actions}
+  />
 )
 
-const main = app(state, actions, view, document.body)
+const main = app(state, actions, view, document.getElementById('root'))
+
+window.state = state
