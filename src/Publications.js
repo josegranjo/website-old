@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Publications = () => (
   <div>
     <h4>Publications</h4>
