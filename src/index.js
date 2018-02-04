@@ -26,7 +26,7 @@ const Footer = ({ onClick }) => (
     <div>
       ふわっと
     </div>
-    <audio id='audioclip' src={clip} style={{display: 'none'}} />
+    <audio id='audioclip' src={clip} preload='auto' style={{display: 'none'}} />
   </footer>
 )
 
