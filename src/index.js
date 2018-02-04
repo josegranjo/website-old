@@ -38,7 +38,7 @@ const Img = () => (
 
 const Application = ({ visible, floatAway }) => {
   if (!visible) {
-    setTimeout(window.close, 2000)
+    // setTimeout(window.close, 2000)
     document.getElementById('audioclip').play()
   }
 
