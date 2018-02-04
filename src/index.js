@@ -26,6 +26,7 @@ const Footer = ({ onClick }) => (
     <div>
       ふわっと
     </div>
+    <audio id='audioclip' src={clip} style={{display: 'none'}} />
   </footer>
 )
 
@@ -38,8 +39,7 @@ const Img = () => (
 const Application = ({ visible, floatAway }) => {
   if (!visible) {
     setTimeout(window.close, 2000)
-    const sound = new Audio(clip)
-    sound.play()
+    document.getElementById('audioclip').play()
   }
 
   return (
