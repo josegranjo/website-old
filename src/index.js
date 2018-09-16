@@ -1,5 +1,5 @@
-import { h, app } from 'hyperapp'
-import './index.css';
+import {h, app} from 'hyperapp'
+import './index.css'
 
 import Header from './Header'
 import About from './About'
@@ -12,31 +12,29 @@ const state = {
 }
 
 const actions = {
-  floatAway: () => state => ({ visible: state.visible = false })
+  floatAway: () => state => ({visible: (state.visible = false)})
 }
 
-const Columns = ({}, children) => (
-  <div className='columns'>
-    {children}
-  </div>
-)
+const Columns = ({}, children) => <div className="columns">{children}</div>
 
-const Footer = ({ onClick }) => (
-  <footer onclick={onClick} >
-    <div>
-      ふわっと
-    </div>
-    <audio id='audioclip' src={clip} preload='auto' style={{display: 'none'}} />
+const Footer = ({onClick}) => (
+  <footer onclick={onClick}>
+    <div>ふわっと</div>
+    <audio id="audioclip" src={clip} preload="auto" style={{display: 'none'}} />
   </footer>
 )
 
 const Img = () => (
   <div styles={{display: 'block'}}>
-    <img src={me} alt='me' width={window.innerWidth <= 440 ? window.innerWidth : 440} />
+    <img
+      src={me}
+      alt="me"
+      width={window.innerWidth <= 440 ? window.innerWidth : 440}
+    />
   </div>
 )
 
-const Application = ({ visible, floatAway }) => {
+const Application = ({visible, floatAway}) => {
   if (!visible) {
     // setTimeout(window.close, 2000)
     document.getElementById('audioclip').play()
@@ -44,23 +42,18 @@ const Application = ({ visible, floatAway }) => {
 
   return (
     <div className={visible ? 'app' : 'app invisible'}>
-      { window.innerWidth <= 440 ? <Img /> : '' }
+      {window.innerWidth <= 440 ? <Img /> : ''}
       <Header />
       <Columns>
         <About />
-        { window.innerWidth > 440 ? <Img /> : '' }
+        {window.innerWidth > 440 ? <Img /> : ''}
       </Columns>
       <Footer onClick={floatAway} />
     </div>
   )
 }
 
-const view = (state, actions) => (
-  <Application
-    {...state}
-    {...actions}
-  />
-)
+const view = (state, actions) => <Application {...state} {...actions} />
 
 const main = app(state, actions, view, document.getElementById('root'))
 

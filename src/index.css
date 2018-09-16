@@ -26,7 +26,7 @@ h4 {
   font-style: normal;
   margin: 40px 16px 44px 0; }
   .socials i:hover {
-    color: #2E7AE8; }
+    color: #2e7ae8; }
 
 .app {
   opacity: 1;
@@ -37,8 +37,8 @@ h4 {
   opacity: 0; }
 
 .header {
-  font-family: 'Rubik';
-  font-size: 18px; }
+  font-family: 'Karla';
+  font-size: 20px; }
   @media screen and (min-width: 0) and (max-width: 440px) {
     .header {
       margin-top: 12px; } }
@@ -48,7 +48,8 @@ h4 {
   justify-content: space-evenly;
   margin: 60px auto 120px auto;
   padding: 0 12px; }
-  .columns > div, .columns > img {
+  .columns > div,
+  .columns > img {
     flex-grow: 1;
     flex-basis: 0; }
   @media screen and (min-width: 0) and (max-width: 440px) {
@@ -58,8 +59,11 @@ h4 {
 .about {
   text-align: left; }
 
-a, a:hover, a:active, a:visited {
-  color: #2E7AE8;
+a,
+a:hover,
+a:active,
+a:visited {
+  color: #2e7ae8;
   display: inline;
   text-decoration: none; }
 
@@ -67,13 +71,13 @@ a:hover {
   text-decoration: underline; }
 
 .blue-text {
-  color: #2E7AE8; }
+  color: #2e7ae8; }
 
 .green-text {
   color: #1ed760; }
 
 footer div {
   cursor: pointer;
-  color: #2E7AE8;
+  color: #2e7ae8;
   font-size: 20px;
   letter-spacing: 4px; }

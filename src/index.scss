@@ -1,7 +1,7 @@
 $phone-width: 440px;
-$background-color: #FCFCFC;
-$blue: #2E7AE8;
-$grey: #A0A0A0;
+$background-color: #fcfcfc;
+$blue: #2e7ae8;
+$grey: #a0a0a0;
 $green: rgba(30, 215, 96, 1);
 
 @mixin phone {
@@ -67,8 +67,8 @@ p {
 }
 
 .header {
-  font-family: 'Rubik';
-  font-size: 18px;
+  font-family: 'Karla';
+  font-size: 20px;
 
   @include phone {
     margin-top: 12px;
@@ -81,7 +81,8 @@ p {
   margin: 60px auto 120px auto;
   padding: 0 12px;
 
-  > div, > img {
+  > div,
+  > img {
     flex-grow: 1;
     flex-basis: 0;
   }
@@ -95,7 +96,10 @@ p {
   text-align: left;
 }
 
-a, a:hover, a:active, a:visited {
+a,
+a:hover,
+a:active,
+a:visited {
   color: $blue;
   display: inline;
   text-decoration: none;
