@@ -8,6 +8,7 @@
   <body>
     <script>
       const paths = window.location.pathname.split('/')
+      console.log(paths)
       window.location = '/' + paths[1] + '?route=' + paths[3]
     </script>
   </body>
