@@ -7,7 +7,8 @@
   </head>
   <body>
     <script>
-      window.location = '/' + '?route=' + window.location.pathname.substr(1)
+      const paths = window.location.pathname.split('/')
+      window.location = '/' + paths[0] + '?route=' + paths[1]
     </script>
   </body>
 </html>
