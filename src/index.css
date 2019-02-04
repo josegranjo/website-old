@@ -1,11 +1,12 @@
 body {
+  background-color: rgba(251, 245, 238, 0.1);
   color: rgba(0, 0, 0, 0.870588);
   margin: 0 auto;
   padding: 42px 0;
   max-width: 1400px;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-stretch: normal;
   font-style: normal;
   font-variant-caps: normal;
@@ -37,8 +38,10 @@ h4 {
   opacity: 0; }
 
 .header {
-  font-family: 'Karla';
-  font-size: 20px; }
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 12px; }
   @media screen and (min-width: 0) and (max-width: 440px) {
     .header {
       margin-top: 12px; } }
@@ -64,6 +67,7 @@ a:hover,
 a:active,
 a:visited {
   color: #2e7ae8;
+  cursor: pointer;
   display: inline;
   text-decoration: none; }
 
