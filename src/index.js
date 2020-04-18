@@ -4,6 +4,10 @@ import './index.css'
 import Header from './Header'
 import About from './About'
 // import MusicGallery from './MusicGallery'
+import Bookshelf from './Bookshelf'
+import Publications from './Publications'
+import Work from './Work'
+import Japan from './Japan'
 
 import me from './images/me.jpg'
 import clip from './clip.wav'
@@ -70,19 +74,31 @@ const Application = ({
   //     whyNotEnabled={whyNotEnabled}
   //     changeWhyNot={changeWhyNot}
   //   />
-  // ) 
+  // )
 
+  const bookshelf = <Bookshelf />
+  const work = <Work />
+  const publications = <Publications />
+  const japan = <Japan />
   const urlParams = new URLSearchParams(window.location.search)
-
+  
   if(urlParams.has('route')) {
     switch(urlParams.get('route')) {
       // case 'grey': return grey
+      case 'bookshelf': return bookshelf
+      case 'publications': return publications
+      case 'work': return work
+      case 'japan': return japan
       default: return homepage
     }
   }
 
   switch(window.location.pathname) {
     // case '/grey': return grey
+    case '/bookshelf': return bookshelf
+    case '/publications': return publications
+    case '/work': return work
+    case '/japan': return japan
     default: return homepage
   }
 }

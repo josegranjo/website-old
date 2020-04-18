@@ -1,6 +1,8 @@
-const Publications = () => (
-  <div>
-    <h4>Publications</h4>
+import { h, app } from 'hyperapp'
+
+export default () => (
+  <div class='left-align page'>
+    <h3>Publications</h3>
     <p>
       <i>
         Representation and analysis of enterprise models with semantic
@@ -26,5 +28,3 @@ const Publications = () => (
     </p>
   </div>
 )
-
-export default Publications
